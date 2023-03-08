@@ -9,28 +9,20 @@ import { ComponentedosComponent } from '../componentedos/componentedos.component
 export class ComponenteunoComponent {
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
-  componentedos = ComponentedosComponent;
+ 
 
 
-    salenn(item:string) {
 
-    this.todo = this.todo.filter(aux => aux != item);
-    console.log("evento CdkDragRelease")
-    
-    console.log(this.todo)
-    console.log(item)
-   }
 
 
 
   entran(event: CdkDragDrop<string[]>) {
    
-    
+   
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-  
+      
     } else {
-     
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
@@ -38,12 +30,14 @@ export class ComponenteunoComponent {
         event.currentIndex,
        
       );
-    
+     
     }
-   
-    console.log("evento CdkDragDrop")
-    console.log(event.container.data)
+    console.log("evento CdkDragDrop  --LISTA UNO")
+    console.log(this.todo)
+    console.log("Lista de donde biene el item")
+   console.log(event.previousContainer.data)
+    
   }
-
+  
 }
 

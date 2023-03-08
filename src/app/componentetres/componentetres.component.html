@@ -8,8 +8,8 @@
       [cdkDropListData]="arraytres"
       [cdkDropListConnectedTo]="['soyelcomponenteuno', 'soyelcomponentedos']"
       class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of arraytres" cdkDrag>{{item}}</div>
+      (cdkDropListDropped)="entran($event)">
+      <div class="example-box" *ngFor="let item of arraytres" cdkDrag >{{item}}</div>
     </div>
   </div>
   

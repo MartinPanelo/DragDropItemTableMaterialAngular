@@ -7,9 +7,12 @@
       [cdkDropListData]="todo"
       [cdkDropListConnectedTo]="['soyelcomponentedos', 'soyelcomponentetres']"
       class="example-list"
-      (cdkDropListDropped)="entran($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag (cdkDragReleased)="salenn(item)">{{item}}</div>
+      (cdkDropListDropped)="entran($event)"
+    >
+      <div class="example-box" *ngFor="let item of todo" cdkDrag >{{item}}</div>
      
     </div>
   </div>
+
+
   

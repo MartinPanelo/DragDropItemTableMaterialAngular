@@ -10,17 +10,49 @@ import { ComponentedosComponent } from '../componentedos/componentedos.component
 })
 export class ComponentetresComponent {
   arraytres = ['saltar', 'volar', 'usar angular', 'procastinar'];
+   mistalista = false;
 
-  drop(event: CdkDragDrop<string[]>) {
+
+
+/* 
+  salenn(item:string) {
+    console.log("evento CdkDragRelease --LISTA TRES")
+
+    if(this.mistalista == false){
+      this.arraytres = this.arraytres.filter(aux => aux != item);
+    
+    
+      console.log(this.arraytres)
+    }
+   
+
+    this.mistalista = false;
+   } */
+
+
+   entran(event: CdkDragDrop<string[]>) {
+   
+    console.log("evento CdkDragDrop --LISTA TRES")
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
+      this.mistalista = true;
+    }    else {
+     
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex,
+       
       );
+      
     }
+   
+   
+    console.log("evento CdkDragDrop  --LISTA TRES")
+    console.log(this.arraytres)
+    console.log("Lista de donde biene el item")
+   console.log(event.previousContainer.data)
   }
+ 
 }
