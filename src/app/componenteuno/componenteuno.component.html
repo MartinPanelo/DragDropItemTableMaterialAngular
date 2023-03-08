@@ -1,0 +1,15 @@
+<div class="example-container">
+    <h2>SOY EN COMPONENTE UNO</h2>
+  
+    <div id="soyelcomponenteuno"
+      cdkDropList
+     
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="['soyelcomponentedos', 'soyelcomponentetres']"
+      class="example-list"
+      (cdkDropListDropped)="entran($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag (cdkDragReleased)="salenn(item)">{{item}}</div>
+     
+    </div>
+  </div>
+  
