@@ -44,5 +44,6 @@ export class ComponentedosComponent {
     console.log(this.done)
     console.log("Lista de donde biene el item")
    console.log(event.previousContainer.data)
+   console.log("item que se traslado",event.previousContainer.data[event.currentIndex])
   }
 }

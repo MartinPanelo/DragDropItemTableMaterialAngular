@@ -32,7 +32,7 @@ export class ComponentetresComponent {
 
    entran(event: CdkDragDrop<string[]>) {
    
-    console.log("evento CdkDragDrop --LISTA TRES")
+  
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       this.mistalista = true;
@@ -53,6 +53,7 @@ export class ComponentetresComponent {
     console.log(this.arraytres)
     console.log("Lista de donde biene el item")
    console.log(event.previousContainer.data)
+   console.log("item que se traslado",event.previousContainer.data[event.currentIndex])
   }
  
 }
